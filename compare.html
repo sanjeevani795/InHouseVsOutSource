@@ -1,0 +1,100 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Compare In House and Out Source</title>
+    <link rel="stylesheet" href="default.css" type="text/css">
+    <script src="compare.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="targetDiv">
+    <div id="mngrDiv" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <h3>Manager</h3>
+        <img src="image/employee.png" id="mngrimg">
+        <div><button type="button" id="btnEmpInc" onclick="increase(event)" title="add one"></button>
+        <label title="Number of Employees" id="pmCount">0</label>
+        <button type="button" id="btnEmpDec" onclick="decrease(event)" title="remove one"></button></div>
+    </div>
+    <div id="LeadDiv" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <h3>Leader</h3>
+        <img src="image/employee.png" id="ldimg">
+        <div><button type="button" id="btnLeadInc" onclick="increase(event)" title="add one"></button>
+        <label title="Number of Employees" id="leadCount">0</label>
+        <button type="button" id="btnLeadDec" onclick="decrease(event)" title="remove one"></button></div>
+    </div>
+    <div id="testerDiv" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <h3>Tester</h3>
+        <img src="image/employee.png" id="testimg">
+        <div><button type="button" id="btnTestInc" onclick="increase(event)" title="add one"></button>
+        <label title="Number of Employees" id="testerCount">0</label>
+        <button type="button" id="btnTestDec" onclick="decrease(event)" title="remove one"></button></div>
+    </div>
+    <div id="devDiv" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <h3>Developer</h3>
+        <img src="image/employee.png" id="devimg">
+        <div><button type="button" id="btnDevInc" onclick="increase(event)" title="add one"></button>
+        <label title="Number of Employees" id="devCount">0</label>
+        <button type="button" id="btnDevDec" onclick="decrease(event)" title="remove one"></button></div>
+    </div>
+    <div id="infraDiv" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <h3>Infrastructure</h3>
+        <img src="image/employee.png" id="infraimg">
+        <div><button type="button" id="btnInfraInc" onclick="increase(event)" title="add one"></button>
+        <label title="Number of Employees" id="infraCount">0</label>
+        <button type="button" id="btnInfraDec" onclick="decrease(event)" title="remove one"></button></div>
+    </div>
+    <div id="othersDiv" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <h3>Others</h3>
+        <img src="image/employee.png" id="otherimg">
+        <div><button type="button" id="btnOtherInc" onclick="increase(event)" title="add one"></button>
+        <label title="Number of Employees" id="OtherCount">0</label>
+        <button type="button" id="btnOtherDec" onclick="decrease(event)" title="remove one"></button></div>
+    </div>
+</div>
+<div id="sliderDiv">
+    <p><label for="OutSourceRng">Out Source</label>
+        <input type="range" id="OutSourceRng" min="0" max="500000" value="0" >
+        <label id="displayOut"></label>
+    </p>
+    <p><label for="inHouseRng">In House</label>
+        <input type="range" id="inHouseRng" min="0" max="500000" value="0" >
+        <label id="displayIn"></label>
+    </p>
+</div>
+<div class="savings">
+    Total Savings
+</div>
+<div id="formsDiv">
+    <fieldset id="outSource">
+        <legend>Cost Out Source($/hour)</legend>
+        <p><label for="txtOutPM">PM</label>
+        <input id="txtOutPM" value="50" disabled="false"></p>
+        <p><label for="txtOutLead">Lead</label>
+        <input id="txtOutLead" value="30" disabled="false"></p>
+        <p><label for="txtOutTester">Tester</label>
+        <input id="txtOutTester" value="20" disabled="false"></p>
+        <p><label for="txtOutDev">Developer</label>
+        <input id="txtOutDev" value="30" disabled="false"></p>
+        <p><label for="txtOutInfra">Infrastructure</label>
+        <input id="txtOutInfra" value="50" disabled="false"></p>
+        <p><label for="txtOutOther">Other</label>
+        <input id="txtOutOther" value="10" disabled="false"></p>
+    </fieldset>
+    <fieldset id="inHouse">
+        <legend>Cost In House($/hour)</legend>
+        <p><label for="txtInPM">PM</label>
+        <input id="txtInPM" value="60"></p>
+        <p><label for="txtInLead">Lead</label>
+        <input id="txtInLead" value="50"></p>
+        <p><label for="txtInTester">Tester</label>
+        <input id="txtInTester" value="40"></p>
+        <p><label for="txtInDev">Developer</label>
+        <input id="txtInDev" value="60"></p>
+        <p><label for="txtInfra">Infrastructure</label>
+        <input id="txtInfra" value="50"></p>
+        <p><label for="txtInOther">Other</label>
+        <input id="txtInOther" value="30"></p>
+    </fieldset>
+</div>
+</body>
+</html>

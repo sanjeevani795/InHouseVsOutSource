@@ -1,0 +1,167 @@
+body{
+    min-width: 10%;
+    max-width: 60%;
+    text-align: center;
+    margin: 5% 20%;
+}
+#formsDiv{
+    width:800px;
+    height:250px;
+    margin:0 auto;
+    padding:10px;
+    float: left;
+}
+#sliderDiv{
+    width:800px;
+    height:100px;
+    margin:0 auto;
+    padding:10px;
+    float: left;
+}
+#targetDiv {
+    float:left;
+    width:600px;
+    height:500px;
+    margin:0 5%;
+    padding:10px;
+    border:1px solid #aaaaaa;
+}
+
+#targetDiv div {
+    width:150px;
+    height:200px;
+    float:left;
+    margin: 1.5em;
+    text-align: center;
+    border:1px solid #aaaaaa;
+}
+#targetDiv div h3{
+    width:100%;
+    float:left;
+    margin: 10px auto;
+}
+#targetDiv div img{
+    width:60%;
+    float:left;
+    margin: 1em 1em 1em 2em;
+}
+#targetDiv div img+div{
+    width: 100%;
+    height:20px;
+    float:left;
+    margin:0 auto;
+    border:none;
+}
+
+#targetDiv div img+div{
+    width: 100%;
+    height:20px;
+    float:left;
+    margin:0 auto;
+    border:none;
+}
+#targetDiv div img+div button{
+    width: 20px;
+    height: 20px;
+    background-image: url(image/top.png);
+    background-color: transparent; /* make the button transparent */
+    background-repeat: no-repeat;  /* make the background image appear only once */
+    border:none;
+}
+#targetDiv div img+div button~button{
+    background-image: url(image/bottom.png);
+}
+#outSource, #inHouse{
+    float: left;
+    width: 40%;
+    height: 100%;
+    margin: 10px;
+}
+#outSource label, #inHouse label{
+    width:3em;
+    margin-right: 0.5em;
+    text-align: left;
+    margin-top: 3px;
+    padding:3px;
+    float:left;
+}
+#outSource input, #inHouse input{
+    height:10px;
+    width:120px;
+    padding: 4px 8px;
+}
+legend {
+    margin-left:1em;
+    text-align: left;
+    color:#000;
+    font-weight:bold;
+}
+
+#sliderDiv input {
+    width: 75%;
+    float:left;
+    padding:5px 0;
+}
+#sliderDiv label{
+    width: 15%;
+    margin-right: 0.1em;
+    text-align:left;
+    float:left;
+    padding:1px;
+}
+
+#sliderDiv label~label{
+    width:5%;
+}
+
+.savings {
+    display: block;
+    clear: left;
+}
+input[type=range] {
+    -webkit-appearance: none;
+    border-radius: 0px;
+    vertical-align: middle;
+    margin-top: -2px;
+    padding: 0;
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: visible;
+    width: 100%;
+    background: transparent;
+}
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none !important;
+    position: relative;
+    pointer-events:none;
+    width: 9px;
+    height: 100%;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    background: darkgray;
+    height: 8px;
+    margin:5px 3px;
+}
+
+input[type=range]::-webkit-slider-thumb:before {
+    content:"-";
+    position: absolute;
+    left:-3000px;
+    right:0;
+    top:0;
+    bottom:0;
+}
+
+input[type=range]::-webkit-slider-thumb:after {
+    content: "";
+    position: absolute;
+    left:-4px;
+    right:-4px;
+    top:-4px;
+    bottom:-4px;
+    background: #adadad;
+    border-radius: 50%;
+    border:5px solid #e8e8e8;
+    z-index: 10;
+}
